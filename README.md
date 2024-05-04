@@ -11,8 +11,8 @@ This tool analyzes air quality data including PM2.5 levels, temperature, and hum
 2. Navigate to the project directory:
 3. Create and activate a Python virtual environment:
    - python3 -m venv venv
-   - source venv/bin/activate # For Unix/Mac
-   - venv\Scripts\activate.bat # For Windows
+   - . env/bin/activate # For Unix/Mac
+   - .\env\Scripts\activate # For Windows
 4. Install the required packages:
    - pip install customtkinter matplotlib geopy pandas tkintermapview
 5. Run the application:
