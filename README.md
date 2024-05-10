@@ -14,6 +14,6 @@ This tool analyzes air quality data including PM2.5 levels, temperature, and hum
    - source venv/bin/activate # For Unix/Mac
    - venv\Scripts\activate.bat # For Windows
 4. Install the required packages:
-   - pip install customtkinter matplotlib geopy pandas tkintermapview
+   -  pip install -r requirements.txt
 5. Run the application:
    - python main.py

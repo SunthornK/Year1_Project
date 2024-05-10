@@ -12,6 +12,5 @@ if __name__ == "__main__":
     model = AirQualityModel(pm25_data, temperature_data, humidity_data)
     view = AirQualityView()
     controller = AirQualityController(model, view)
-    view.controller = controller
-
-    controller.view.run()
+    view.set_controller(controller)
+    controller.run()
