@@ -75,7 +75,6 @@ class AirQualityModel:
             self.humidity_data = pd.read_csv("humidity_data.csv")
             self.stations = self.pm25_data.columns[3:]
             self.dates_times = pd.to_datetime(self.pm25_data['date'] + ' ' + self.pm25_data['time'])
-            # self.pm25_data.set_index(['date', 'time'], inplace=True)
             print("Data loaded successfully.")
             return self.dates_times, self.stations
         except FileNotFoundError:

@@ -10,7 +10,6 @@ import pandas as pd
 from matplotlib import pyplot as plt
 
 
-
 class AirQualityController:
     def __init__(self, model, view):
         """
@@ -175,11 +174,9 @@ class AirQualityController:
                             "Humidity": self.view.humidity_checkbox.get()
                         }
 
-                        # Count the number of selected checkboxes
                         num_selected = sum(checkboxes_selected.values())
 
                         if num_selected == 1:
-                            # Display line graph
                             selected_var = [var for var, selected in checkboxes_selected.items() if selected][0]
                             self.display_line_graph(pm25_data_filtered, temperature_data_filtered,
                                                     humidity_data_filtered, selected_station, selected_var)
@@ -191,7 +188,6 @@ class AirQualityController:
                                                          humidity_data_filtered, selected_station, var1, var2)
                         else:
                             messagebox.showerror("Error", "Please select either one or two checkboxes")
-
 
                     except ValueError:
                         messagebox.showerror("Error", "Invalid date or time format")
