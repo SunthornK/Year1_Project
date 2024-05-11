@@ -1,6 +1,5 @@
-import pandas as pd
 from matplotlib import pyplot as plt
-
+from tkinter import messagebox
 
 class AirQualityController:
     def __init__(self, model, view):
@@ -44,5 +43,12 @@ class AirQualityController:
         else:
             print("You need to load data first.")
 
+    def check_end_date(self):
+        start_date = self.view.get_start_date()
+        end_date = self.view.get_end_date()
+
+        if not self.model.is_valid_date_range(start_date, end_date):
+            messagebox.showerror("Error", "End date must be after start date")
+            self.view.set_end_date(start_date)
     def run(self):
         self.view.run()

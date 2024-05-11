@@ -17,6 +17,10 @@ class AirQualityModel:
             return self.dates_times, self.stations
         except FileNotFoundError:
             print("CSV file not found.")
+
+    def is_valid_date_range(self, start_date, end_date):
+        return end_date >= start_date
+
     def estimate_pm25(self, location):
         pass
 
